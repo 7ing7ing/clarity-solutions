@@ -1058,7 +1058,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 body {
-  background-image: url("./images/BG-Graphic.jpg");
+  background-image: url("images/BG-Graphic.jpg");
   background-repeat: no-repeat;
   background-size: 582px;
   background-position-x: -293px;
@@ -1074,7 +1074,7 @@ body {
   }
 
   .building-background {
-    background-image: url("./images/main-header.png");
+    background-image: url("images/main-header.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1088,7 +1088,7 @@ body {
 }
 
 #core-values {
-  background-image: url("./images/core-values.png");
+  background-image: url("images/core-values.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
