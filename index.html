@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./production.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Clarity Solutions</title>
+</head>
+
+<body>
+    <header class="fixed w-full top-0 flex justify-between pr-5 pl-5 lg:pr-48 lg:pl-48 z-10" x-data="{ open: false }">
+        <div class="flex justify-between items-center">
+            <a href="/"><img src="./images/logo.png" alt="logo" class="h-9 lg:h-14 lg:my-3 lg:mr-36 " /></a>
+            <!-- desktop nav -->
+            <div class="hidden lg:inline-block">
+                <a href="#our-services"
+                    class="mr-16 font-Hind font-black text-navy link-underline link-underline-color">Our
+                    services</a>
+                <a href="#core-values"
+                    class="mr-16 font-Hind font-black text-navy link-underline link-underline-color">Core
+                    values</a>
+                <a href="#about-us"
+                    class="mr-16 font-Hind font-black text-navy link-underline link-underline-color">About
+                    us</a>
+                <a href="#our-team" class="mr-16 font-Hind font-black text-navy link-underline link-underline-color">Our
+                    team</a>
+            </div>
+            <a href="#contact-us" class="contact-button-header">
+                <button
+                    class="hidden lg:inline-block py-3 px-8 font-Hind font-black text-navy bg-mint hover:bg-navy hover:text-white active:bg-pink active:text-navy rounded-lg">
+                    Contact us
+                </button>
+            </a>
+        </div>
+        <!-- nav (hamuburger) overlay -->
+        <ul x-show="open" @click.away="open = false"
+            class="pl-5 pr-5 pt-16 navList flex flex-col w-full  bg-navy  text-white text-3xl font-Hind font-bold z-10 absolute overflow-y-auto"
+            style="display: none; top: 0; left: 0">
+            <li class="pb-4"><a href="#our-services">Our services</a></li>
+            <li class="pb-4"><a href="#core-values">Core values</a></li>
+            <li class="pb-4"><a href="#about-us">About us</a></li>
+            <li class="pb-4"><a href="#our-team">Our team</a></li>
+            <button type="submit"
+                class="w-full py-3 px-8 font-Hind font-black text-xl text-navy bg-mint hover:bg-navy hover:text-white duration-300 rounded-lg">
+                <li><a href="#contact-us">Contact us</a></li>
+            </button>
+
+        </ul>
+        <!-- nav (hamburger) -->
+        <div class="pt-1.5 flex flex-col justify-center relative">
+            <button class="lg:hidden hamburgerButton z-20 w-5 h-10 relative focus:outline-none" @click="open = !open">
+                <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true"
+                        class="firstLineCross {open?text-white:text-navy} block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                        :class="{'rotate-45': open,' -translate-y-1.5': !open, 'text-white': open}"></span>
+                    <span aria-hidden="true"
+                        class="text-navy block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                        :class="{'opacity-0': open } "></span>
+                    <span aria-hidden="true"
+                        class="secondLineCross block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                        :class="{'-rotate-45': open, 'translate-y-1.5': !open, 'text-white': open}"></span>
+                </div>
+            </button>
+        </div>
+
+    </header>
+    <main class="pr-5 pl-5 lg:pr-48 lg:pl-48">
+        <div class="building-background"></div>
+        <!-- Position absolute is related to body (there is no nearest positioned ancestor) -->
+        <div class="lg:w-1/2">
+            <h2 class="font-Montserrat text-4xl pt-44 text-navy">
+                We deliver worry-free compliance solutions that let you focus on what
+                you do best
+            </h2>
+            <h5 class="font-Hind text-2xl pt-6 text-grey">
+                Our people, knowledge, experience, and connections are focused on
+                removing the stress from navigating the complex regulatory landscape.
+            </h5>
+            <div class="mt-6">
+                <a href="#our-services">
+                    <button
+                        class="py-3 px-8 font-Hind font-black text-navy bg-mint hover:bg-navy hover:text-white active:bg-pink active:text-navy duration-300 rounded-lg">
+                        Our services
+                    </button>
+                </a>
+                <a href="#contact-us"><button
+                        class="my-3 mx-8 font-Hind font-black text-navy link-underline link-underline-color">
+                        Contact us
+                    </button></a>
+
+            </div>
+        </div>
+        <div class="flex justify-center mt-6 lg:mt-80">
+            <a href="#our-services">
+                <img src="./images/mouse.svg" aria-label="hidden" class="my-28 icon" />
+            </a>
+
+        </div>
+    </main>
+    <section id="our-services" class="ourServicesSection pr-5 pl-5 lg:pr-48 lg:pl-48 lg:mb-32">
+        <h2 class="font-Montserrat text-4xl text-navy lg:text-center">Our services</h2>
+        <div class="lg:grid lg:grid-cols-3 lg:mt-6">
+            <div class="mt-8 lg:flex">
+                <img src="./images/outsourced-compliance.png" aria-hidden="true" class="w-16 h-16 lg:mr-9" />
+                <div>
+                    <h4 class="py-2 font-Hind text-2xl font-black text-navy">
+                        Outsourced compliance
+                    </h4>
+                    <p class="text-lg text-grey lg:pr-8">
+                        Our experienced team can fulfill compliance officer and MLRO
+                        requirements for any business.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 lg:flex">
+                <img src="./images/compliance-support.png" aria-hidden="true" class="w-16 h-16 lg:mr-9" />
+                <div>
+                    <h4 class="py-2 font-Hind text-2xl font-black text-navy">
+                        Compliance support
+                    </h4>
+                    <p class="text-lg text-grey lg:pr-8">
+                        We provide ad hoc and continuing support to a firm's inhouse
+                        compliance team seamlessly.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 lg:flex">
+                <img src="./images/bespoke-reviews.png" aria-hidden="true" class="w-16 h-16 lg:mr-9" />
+                <div>
+                    <h4 class="py-2 font-Hind text-2xl font-black text-navy">
+                        Bespoke reviews
+                    </h4>
+                    <p class="text-lg text-grey lg:pr-8">
+                        We can conduct detailed reviews for firm's operations against
+                        regulatory requirements and identify any gaps.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 lg:flex">
+                <img src="./images/licence-applications.png" aria-hidden="true" class="w-16 h-16 lg:mr-9" />
+                <div>
+                    <h4 class="py-2 font-Hind text-2xl font-black text-navy">
+                        Licence applications
+                    </h4>
+                    <p class="text-lg text-grey lg:pr-8">
+                        We can assisst financial services firms wanting to set up regulated
+                        entities.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 lg:flex">
+                <img src="./images/training.png" aria-hidden="true" class="w-16 h-16 lg:mr-9" />
+                <div>
+                    <h4 class="py-2 font-Hind text-2xl font-black text-navy">Training</h4>
+                    <p class="text-lg text-grey lg:pr-8">
+                        We can provide tailored material covering areas such as anti-money
+                        laundering, compliance, and corporate governance.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 lg:flex">
+                <img src="./images/remediation-support.png" aria-hidden="true" class="w-16 h-16 lg:mr-9" />
+                <div>
+                    <h4 class="py-2 font-Hind text-2xl font-black text-navy">
+                        Remediation support
+                    </h4>
+                    <p class="text-lg text-grey lg:pr-8">
+                        We can assist firms to remediate deficiencies uncovered by Audits or
+                        regulators.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="core-values" class="text-white core-values mt-16 pb-16 lg:pr-48 lg:pl-48 lg:flex">
+        <div class="hidden lg:w-1/2 lg:flex lg:justify-center lg:items-center">
+            <img src="./images/core-values-graphic.png" aria-hidden="true" class="h-4/6">
+        </div>
+        <div class="lg:w-1/2 pr-5 pl-5 flex items-center">
+            <div>
+                <h2 class="font-Montserrat text-4xl pt-16 pb-8">Our core values</h2>
+                <div class="accordion">
+                    <div class="accordion-header is-active">
+                        <div class="flex">
+                            <img src="./images/expand-collapse.png" aria-hidden="true"
+                                class="accordion-img up h-2 mt-6 mr-2" />
+                            <h4 class="py-3 font-Hind text-2xl font-black">
+                                01. Client-focused
+                            </h4>
+                        </div>
+                        <span class="accordion-toggle"></span>
+                    </div>
+                    <div class="accordion-body is-active">
+                        <p class="pl-4 text-lg font-Hind">
+                            Our clients are the lifeblood of our business. When we partner up
+                            with clients, we represent them and priority their needs. We
+                            strive to deliver the best possible experience and are passionate
+                            about helping them success.
+                        </p>
+                    </div>
+                    <div class="accordion-header">
+                        <div class="flex">
+                            <img src="./images/expand-collapse.png" aria-hidden="true"
+                                class="accordion-img h-2 mt-6 mr-2" />
+                            <h4 class="py-3 font-Hind text-2xl font-black">
+                                02. Team member growth
+                            </h4>
+                        </div>
+                        <span class="accordion-toggle"></span>
+                    </div>
+                    <div class="accordion-body">
+                        <p class="pl-5">
+                            Our success is dependent upon the collective knowledge, skills,
+                            energy, and contribution of all our colleagues. That's why, in a
+                            industry that requires us to be on the front foot, we make it a
+                            priority to support our tem member's growth.
+                        </p>
+                    </div>
+                    <div class="accordion-header">
+                        <div class="flex">
+                            <img src="./images/expand-collapse.png" aria-hidden="true"
+                                class="accordion-img h-2 mt-6 mr-2" />
+                            <h4 class="py-3 font-Hind text-2xl font-black">
+                                03. Solve problems
+                            </h4>
+                        </div>
+                        <span class="accordion-toggle"></span>
+                    </div>
+                    <div class="accordion-body">
+                        <p class="pl-4 text-lg font-Hind">
+                            We are always searching for more efficient ways to comply with the
+                            regulations and to simplify the process. Compliance can be
+                            overwhelming aspect of your business, but with our industry
+                            knowledge, we can identify and resolve any potential issues.
+                        </p>
+                    </div>
+                    <div class="accordion-header">
+                        <div class="flex">
+                            <img src="./images/expand-collapse.png" aria-hidden="true"
+                                class="accordion-img h-2 mt-6 mr-2" />
+                            <h4 class="py-3 font-Hind text-2xl font-black">04. Agile</h4>
+                        </div>
+                        <span class="accordion-toggle"></span>
+                    </div>
+                    <div class="accordion-body">
+                        <p class="pl-4 text-lg font-Hind">
+                            We respond to the client's requirements and work with them to
+                            deliver our services and compliance solutions that best fit their
+                            business. We appreciate that every business has different needs
+                            and with our expansive industry knowledge, we can help deliver
+                            results.
+                        </p>
+                    </div>
+                    <div class="accordion-header">
+                        <div class="flex">
+                            <img src="./images/expand-collapse.png" aria-hidden="true"
+                                class="accordion-img h-2 mt-6 mr-2" />
+                            <h4 class="py-3 font-Hind text-2xl font-black">
+                                05. Provide clarity
+                            </h4>
+                        </div>
+                        <span class="accordion-toggle"></span>
+                    </div>
+                    <div class="accordion-body">
+                        <p class="pl-4 text-lg font-Hind">
+                            The world of compliance and regulation can be overwhelming, that's
+                            why we're not about jargon or "legalese". We explain what needs to
+                            be done and what has achieved in a way that the client can easily
+                            understand.
+                        </p>
+                    </div>
+                    <div class="accordion-header">
+                        <div class="flex">
+                            <img src="./images/expand-collapse.png" aria-hidden="true"
+                                class="accordion-img h-2 mt-6 mr-2" />
+                            <h4 class="py-3 font-Hind text-2xl font-black">
+                                06. Support start-ups
+                            </h4>
+                        </div>
+                        <span class="accordion-toggle"></span>
+                    </div>
+                    <div class="accordion-body">
+                        <p class="pl-4 text-lg font-Hind">
+                            It can be scary not knowing where to start with a new business but
+                            don't worry. We find solutions to help small businesses lookin to
+                            make an impact in financial services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div class="pr-5 pl-5 lg:pr-48 lg:pl-48 mb-16 lg:flex lg:flex-row-reverse">
+            <div class="lg:w-1/2">
+                <img src="./images/about-us.png" aria-hidden="true" class="-mt-20 lg:mt-32" />
+            </div>
+            <div class="lg:w-1/2 lg:mt-32">
+                <div class="lg:w-5/6">
+                    <h2 class="font-Montserrat text-4xl mb-4 text-navy">About us</h2>
+                    <p class="text-lg text-grey">
+                        Clarity was created in August 2020 to fill the gap in the market for
+                        premium compliance services delivery. Founded by two senior consultants
+                        eager to escape the corporate compliance worked, Clarity is all about
+                        bringing passion and energy to an area which is frequently
+                        underestimated or ignored.
+                    </p>
+                    </br>
+                    <p class="text-lg text-grey">
+                        At Clarity, compliance isn't an afterthought, it underpins the
+                        structure of a company's entire DIFC operation. Holding respect for
+                        that fact at the heart of everything we do means your interests are
+                        protected. Trust us to help you lay the right foundation so your
+                        business can shine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="our-team" class="ml-5 lg:pr-80 lg:pl-80">
+        <div class="hidden lg:inline">
+            <hr class="lg:pt-8">
+        </div>
+        <h2 class="font-Montserrat text-4xl mb-8 text-navy lg:text-center">Our Team</h2>
+        <div class="flex flex-wrap justify-center lg:justify-start">
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/natalie-hodgins.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Natalie Hodgins</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">FOUNDING PARTNER</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="shamshad-khan"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy  rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/shamshad-khan.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Shamshad Khan</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">FOUNDING PARTNER</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="barry-cotter"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy  rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/barry-cotter.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Barry Cotter</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">PARTNER</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div class="hidden lg:inline lg:h-5 lg:w-full">
+                <hr class="lg:pt-8 mr-12">
+            </div>
+            <div class="hidden lg:block lg:w-full"></div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/ana-sewell.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Ana Sewell</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">CONSULTANT</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/bhavika-asar.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Bhavika Asar</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">CONSULTANT</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+
+                </div>
+            </div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/flora-howard.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Flora Howard</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">SENIOR CONSULTANT</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/jade-efole.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Jade Efole</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">CONSULTANT</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div class="hidden lg:inline lg:h-5 lg:w-full">
+                <hr class="lg:pt-8 mr-12">
+            </div>
+            <div class="hidden lg:block lg:w-full"></div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/jaquiline-martin.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Jaquiline Martin</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">DIRECTOR</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/jennifer-curtin.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Jennifer Curtin</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">CONSULTANT</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/kashif-khan.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Kashif Khan</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">ANALYST</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div data-card-name="natalie-hodgins"
+                class="card-container mr-5 mb-5 flex w-44 flex-col justify-center bg-white hover:bg-navy rounded-lg border active:border-4 border-t-0 border-gray-200 active:border-navy">
+                <div class="img-container rounded-t-lg">
+                    <img class="aspect-video h-40 rounded-t-lg" src="./images/staff/vaishnavi-srinivasan.jpg" />
+                </div>
+                <div class="p-4 rounded-b-lg">
+                    <h6 class="hover-white-text font-Hind font-black text-base text-navy">Vaishnavi Srinivasan</h6>
+                    <p class="hover-white-text font-Hind text-xs text-grey leading-6">DIRECTOR</p>
+                    <small class="hover-white-text font-Hind font-black text-navy text-sm">View Bio</small>
+                </div>
+            </div>
+            <div class="mr-5 mb-5 flex w-44 flex-col justify-center lg:hidden"></div>
+        </div>
+        <!-- Modal window cards -->
+
+        <div id="natalie-hodgins-card"
+            class="hidden z-20 absolute bg-white complete-card rounded-2xl flex-col lg:flex-row w-11/12 lg:w-full">
+            <div>
+                <button onclick="closeModalWindow()">
+                    <img src="./images/close-circle.svg" aria-label="hidden"
+                        class="w-8 flex absolute top-4 right-4 icon-close">
+                </button>
+            </div>
+            <div class="flex flex-col items-center lg:items-start lg:flex-row px-3 lg:px-6">
+                <div class="lg:w-1/3 flex flex-col">
+                    <img src="./images/staff/natalie-hodgins.jpg" alt="Natalie Hodgins" class="hexagon">
+                    <a href="#" class="flex justify-center mt-4">
+                        <img src="./images/linkedin.png" aria-label="hidden" class="w-6 mr-1">
+                        <p class="font-Hind font-black text-navy link-underline link-underline-color">LinkedIn</p>
+                    </a>
+                </div>
+                <div class="lg:w-2/3">
+                    <h4 class="font-Montserrat text-4xl text-Navy">Natalie Hodgins</h4>
+                    <small class="font-Hind text-small text-grey mb-4">FOUNDING PARTNER</small>
+                    <p class="font-Hind text-lg text-grey mt-2 mb-8">Natalie has worked in the field of anti-money
+                        laundering both as
+                        a lawyer and as a compliance professional for the past 20 years. She has worked in the DIFC
+                        since
+                        2014 specialising in assisting firms in the insurance sector. Her clients included some of the
+                        world’s largest reinsurance companies and brokerages operating within the DIFC. Natalie has a
+                        Bachelor of Arts degree in law from the University of Oxford and a Master of Science degree in
+                        forensic psychology and criminology from the Open University. She has also completed the Diploma
+                        in
+                        Compliance awarded by the International Compliance Association.</p>
+                </div>
+            </div>
+        </div>
+        <div id="shamshad-khan-card"
+            class="hidden z-20 absolute bg-white complete-card rounded-2xl flex-col lg:flex-row w-11/12 lg:w-full">
+            <div>
+                <button onclick="closeModalWindow()">
+                    <img src="./images/close-circle.svg" aria-label="hidden"
+                        class="lg:w-8 flex absolute top-4 right-4 icon-close">
+                </button>
+            </div>
+            <div class="flex flex-col items-center lg:items-start lg:flex-row px-3 lg:px-6">
+                <div class="lg:w-1/3 flex flex-col">
+                    <img src="./images/staff/shamshad-khan.jpg" alt="Shamshad Khan" class="hexagon">
+                    <a href="#" class="flex justify-center mt-4">
+                        <img src="./images/linkedin.png" aria-label="hidden" class="w-6 mr-1">
+                        <p class="font-Hind font-black text-navy link-underline link-underline-color">LinkedIn</p>
+                    </a>
+                </div>
+                <div class="lg:w-2/3">
+                    <h4 class="font-Montserrat text-4xl text-Navy">Shamshad Khan</h4>
+                    <small class="font-Hind text-small text-grey mb-4">FOUNDING PARTNER</small>
+                    <p class="font-Hind text-lg text-grey mt-2 mb-8">Shamshad has more than 20 years' experience in the
+                        financial services industry and has held senior compliance positions with several financial
+                        institutions in the insurance, asset management, investment banking, and private banking sectors
+                        in both Canada and the UAE. Having worked as an inhouse and outsourced Compliance Officer/MLRO
+                        for several firms authorised by the DFSA, Shamshad has a Bachelor of Commerce degree in
+                        Accounting from Concordia University. She has completed the Investment Funds course from the
+                        Institute of Canadian Bankers as well as the Officers', Partners’, and Directors' course from
+                        the Investment Funds Institute of Canada.</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="barry-cotter-card"
+            class="hidden z-20 absolute bg-white complete-card rounded-2xl flex-col lg:flex-roww-11/12 lg:w-full">
+            <div>
+                <button onclick="closeModalWindow()">
+                    <img src="./images/close-circle.svg" aria-label="hidden"
+                        class="w-8 flex absolute top-4 right-4 icon-close">
+                </button>
+            </div>
+            <div class="flex flex-col items-center lg:items-start lg:flex-row px-3 lg:px-6">
+                <div class="lg:w-1/3 flex flex-col">
+                    <img src="./images/staff/barry-cotter.jpg" alt="Barry Cotter" class="hexagon">
+                    <a href="#" class="flex justify-center mt-4">
+                        <img src="./images/linkedin.png" aria-label="hidden" class="w-6 mr-1">
+                        <p class="font-Hind font-black text-navy link-underline link-underline-color">LinkedIn</p>
+                    </a>
+                </div>
+                <div class="lg:w-2/3">
+                    <h4 class="font-Montserrat text-4xl text-Navy">Barry Cotter</h4>
+                    <small class="font-Hind text-small text-grey mb-4">PARTNER</small>
+                    <p class="font-Hind text-lg text-grey mt-2 mb-8">Having begun his career in financial services
+                        compliance in London, Barry has been in the UAE since 2012. Having worked in both consulting
+                        and inhouse capacities across a range of financial services firms, Barry has a broad range
+                        of experience that he brings to Clarity. Barry has a Bachelor of Science degree in Chemistry
+                        from the University of Nottingham. He has also obtained the Advanced Diploma from the
+                        Chartered Insurance Institute and the Diploma in Compliance awarded by the International
+                        Compliance Association.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-window-background" class="bg-navy w-full h-full hidden opacity-90 z-10 absolute"
+            onclick="closeModalWindow()"></div>
+    </section>
+
+    <section id="contact-us" class="mr-5 ml-5 lg:mr-48 lg:ml-48">
+        <h2 class="font-Montserrat text-4xl mb-8 text-navy lg:text-center">Contact Us</h2>
+        <div class="flex justify-center">
+            <div class="max-w-md lg:max-w-4xl rounded-xl shadow-2xl border lg:flex">
+                <div
+                    class="lg:w-1/3 p-4 lg:pt-12 bg-navy text-white rounded-xl rounded-b-none lg:rounded-xl lg:rounded-r-none">
+                    <h1 class="font-Montserrat text-2xl">Contact Information</h1>
+                    <p class="py-2 font-Hind text-lightGrey text-sm">Complete the form or use the contact details
+                        below to get in touch with us.</p>
+                    <div class="flex my-3">
+                        <img src="./images/email.png" aria-hidden="true" class="w-6 h-6 mr-2">
+                        <h4 class="font-Hind text-lg">hello@claritysolutions.ae</h4>
+                    </div>
+                    <div class="flex my-3">
+                        <img src="./images/phone.png" aria-hidden="true" class="w-6 h-6 mr-2">
+                        <h4 class="font-Hind text-lg">+971(0)4 439 6761</h4>
+                    </div>
+                    <div class="flex my-3">
+                        <img src="./images/location.png" aria-hidden="true" class="w-6 h-6 mr-2">
+                        <h4 class="font-Hind text-lg">123 Fake St <br>Central Business Centre <br>Dubai <br>United
+                            Arab Emirates</h4>
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./images/location.png" aria-hidden="true" class="w-6 h-6 mr-2">
+                        <h4 class="font-Hind text-lg">123 Fake St <br>Central Business Centre <br>Dubai <br>United
+                            Arab Emirates</h4>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 p-7">
+                    <form class="lg:flex lg:flex-col">
+                        <div class="lg:flex lg:justify-between">
+                            <div class="mb-6 lg:flex lg:flex-col lg:w-full lg:pr-5">
+                                <label class="pt-6 text-sm text-navy font-Hind font-bold">First name</label>
+                                <input type="text" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md hover:border-pink active:border-navy active:outline-none focus:outline-double focus:border-navy" />
+                            </div>
+                            <div class="mb-6 lg:flex lg:flex-col lg:w-full">
+                                <label class="pt-6 text-sm text-navy font-Hind font-bold">Last Name</label>
+                                <input type="text" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md hover:border-pink active:border-navy active:outline-none focus:outline-double focus:border-navy" />
+                            </div>
+                        </div>
+                        <div class="lg:flex lg:justify-between">
+                            <div class="mb-6 lg:flex lg:flex-col lg:w-full lg:pr-5">
+                                <label class="pt-6 text-sm text-navy font-Hind font-bold">Email</label>
+                                <input type="email" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md hover:border-pink active:border-navy active:outline-none focus:outline-double focus:border-navy" />
+                            </div>
+                            <div class="mb-6 lg:flex lg:flex-col lg:w-full">
+                                <label class="pt-6 text-sm text-navy font-Hind font-bold">Phone</label>
+                                <input type="text" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md hover:border-pink active:border-navy active:outline-none focus:outline-double focus:border-navy" />
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="pt-6 text-sm text-navy font-Hind font-bold">Your Message</label>
+                            <textarea rows="5"
+                                class="resize-none w-full px-3 py-2 border border-gray-300 rounded-md hover:border-pink active:border-navy active:outline-none focus:outline-double focus:border-navy"
+                                required></textarea>
+                        </div>
+                        <div class="mb-6 lg:flex lg:flex-end">
+                            <div class="lg:w-full"></div>
+                            <button type="submit"
+                                class="w-full lg:w-1/2 py-3 px-8 font-Hind font-black text-xl text-navy bg-mint hover:bg-navy hover:text-white  active:bg-pink active:text-navy duration-300 rounded-lg">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pb-6 mt-20 text-sm font-semibold mr-5 ml-5 lg:mr-48 lg:ml-48">
+        <hr class="border-solid mb-4">
+        <div class="lg:flex lg:justify-between">
+            <div class="flex place-content-between lg:mx-12 my-1">
+                <a href="/index.html" class="text-navy ">2022 Clarity Solutions</a>
+                <a href="#" class="text-footerGrey lg:px-2 ">|</a>
+                <a href="/terms-conditions.html" class="text-navy underline">Terms and Conditions</a>
+            </div>
+            <div class="text-center lg:my-1">
+                <a href="#" class="text-navy underline">Website by Adeo</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="./index.js" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("/images/BG-Graphic.jpg");
+  background-repeat: no-repeat;
+  background-size: 582px;
+  background-position-x: -293px;
+  background-position-y: 350px;
+  overflow-x: hidden;
+}
+@media (min-width: 1024px) {
+  body {
+    background-size: 1571px;
+    background-position-x: -640px;
+    background-position-y: 550px;
+  }
+
+  .building-background {
+    background-image: url("/images/main-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -120px;
+    right: -283px;
+    width: 1045px;
+    height: 1206px;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+#core-values {
+  background-image: url("/images/core-values.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.link-underline-color {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#101031, #101031);
+}
+
+.link-underline-color:active {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#74fbdf, #74fbdf);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+.icon {
+  filter: invert(10%) sepia(6%) saturate(100%) hue-rotate(204deg) brightness(0%)
+    contrast(107%);
+}
+
+.icon-close:hover {
+  filter: invert(76%) sepia(22%) saturate(4874%) hue-rotate(297deg)
+    brightness(100%) contrast(86%);
+}
+
+.icon:hover {
+  filter: invert(76%) sepia(22%) saturate(4874%) hue-rotate(297deg)
+    brightness(100%) contrast(86%);
+  transform: translate(0, -10px);
+  transition: 0.3s ease-in-out;
+}
+
+.is-active .accordion-toggle::before {
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion-body {
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.accordion-body.is-active {
+  opacity: 1;
+  height: auto;
+}
+
+.accordion-img.up {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container {
+  overflow: hidden;
+}
+.card-container:hover .hover-white-text {
+  color: white;
+}
+
+.card-container:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.hexagon {
+  height: 222px;
+  width: 200px;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.complete-card {
+  max-width: 748px;
+  max-height: 882px;
+}
+
+@media (min-width: 1024px) {
+  .complete-card {
+    max-width: 748px;
+    max-height: 441px;
+  }
+}
