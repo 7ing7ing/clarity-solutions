@@ -13,4 +13,4 @@ Functionalities of this page:
 - TailwindCSS
 - Javascript and Alpine.js
 
-:link:Link:
+:link:Link: https://7ing7ing.github.io/clarity-solutions/
